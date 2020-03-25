@@ -1,0 +1,65 @@
+body{
+    margin: 0 ;
+}
+div#formulaire{
+    width: 90%;
+    border: 1px dashed black;
+    padding: 12px;
+    text-align: center;
+    margin:0 auto;
+}
+
+
+div#centrer{
+    width: 80%;
+    margin:0 auto;
+}
+
+#tinf{
+    margin-right: 5%;
+}
+
+#tabs{
+    border: 1px dashed black;
+    height: 450px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+
+.tableau{
+    
+    width: 45%;
+    float: left;
+}
+.tableau h2{
+    text-align: center;
+}
+.tableau table{
+    width: 100%;
+    overflow: hidden;
+}
+
+.tableau .indice{
+    text-align: center;
+}
+
+.tableau .indice a{
+    text-decoration: none;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

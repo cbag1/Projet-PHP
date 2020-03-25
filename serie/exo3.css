@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding:0;
+}
+
+.page{
+    margin: 0 auto;
+    width: 60%;
+}
+
+.nbform{
+   width: 100%;
+}
+
+.nbform input[type=text]{
+    
+    width: 50%;
+}
+
+
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.nbform input[type=submit]{
+    width: 20%;
+    background-color: #0073FD;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.nbform input[type=reset]{
+    width: 20%;
+    background-color: #EB4644;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#result{ 
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.generer #result{
+    margin-left: 280px;
+}
+
+span{
+    color:red;
+}
+
+.reponse{
+    padding-top: 20px;
+    height:100px;
+    text-align: center;
+    background-color: #E5E8ED;
+}
+
+
+.reponse h1{
+    font-weight: lighter;
+}
+
+.reponse span{
+    background-color: #D2E9DA;
+    color: black;
+    padding:20px;
+}
