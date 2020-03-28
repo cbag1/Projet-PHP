@@ -16,7 +16,16 @@
         <div id="formlogin">
             <div id="flogintext"> </div>
             <div id="flogincontain">
-                <input id="logint" type="text" name="" id="">
+                <div class="form-all">
+
+                    <div class="text-form">
+                        <input type="text" name="login">
+                    </div>
+                    <div class="img-form">
+                        <img src="Images/Icones/ic-login.png" alt="">
+                    </div>
+
+                </div>
             </div>
         </div>
 
