@@ -158,5 +158,26 @@ function verifnombre($mot){
   return TRUE;
 }
 
+function f1($phrase){
+  $phrase=trim($phrase);  
+  $phrase[0]=strtoupper($phrase[0]);
+  return $phrase;
+  
+}
+
+function supp_espace_inutile($chaine){
+  $pattern2 = "% ?' ?%";
+  $pattern = '%\s{2,}%';
+  $pattern3 = "% ?;%";
+  $replacement = ' ';
+  $replacement2 = '\'';
+  $replacement3=';';
+  $chaine=preg_replace($pattern, $replacement, $chaine);
+  $chaine=preg_replace($pattern2, $replacement2, $chaine);
+  $chaine=preg_replace($pattern3, $replacement3, $chaine);
+
+  return $chaine;
+}
+
 
  ?>

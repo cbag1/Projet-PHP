@@ -1,90 +1,97 @@
 body{
-    background-image: url('Images/img-bg.jpg');
-    background-size:cover;
-    margin:0;
-    padding:0;
+    background-image: url('img/img-bg.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
-html{
-    margin:0;
-    padding:0;
+/* header */
+.header{
+    background-color: #071814;
+    height: 5rem;
+    width: 100%;
 }
-
-#header{
-    background-color: black;
-    height:70px;
+.header div{
+    height: 10%;
 }
-
-#logo {
-    height:100%;
-    width: 10%;
-    float: left;
-}
-
-#logo img{
-    height: 100%;
-}
-
-#textheader{
-    height: 100%;
-    width: 90%;
+.header h2{
     color: white;
-}
-
-#textheader h1{
     text-align: center;
-    padding-top: 20px;
+    font-family: 'Open Sans', sans-serif;
 }
-
-
-#partielogin{
-    height:550px;
-    padding-top:70px;
+.header .img img{
+    height: 80px;
+    margin-left: 20px;
 }
-
-#formlogin{
-    width: 50%;
-    height: 430px;
-    margin:0 auto;
-    background-color: green;
-}
-
-#flogintext{
-    height: 20%;
-    background-color: grey;
-}
-
-
-
-#flogincontain{
-    width: 100%;
-    margin-top: 50px;
-    overflow: auto;
-}
-.form-all{
-    width: 80%;
-    height: 100px;
+/* menu */
+.menu{
+    width: 40%;
+    height: 20rem;
     margin: 0 auto;
-    
+    background-color: white;
+    margin-top: 8rem;
+    border-radius: 5px;
 }
-
-div.text-form{
-    float: left;
-    width: 90%;
-    
+.formulaire{
+    height: 80%;
 }
-
-div.text-form input[type=text]{
-    width: 100%;
-    height: 100%;
+.login-form{
+    height: 15%;
+    background-color: #3ebedf;
+    padding: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
-
-div.img-form{
+.login-form img{
+    width: 5%;
     float: right;
-    width: 6%;
+    margin-top: -40px;
+    color: white;
+    margin-right: 20px;
 }
-
-
-div.img-form img{
+h2{
+    margin-left: 5%;
+    color: white;
+    margin-top: 10px;
+}
+input{
+    padding: 10px;
+    width: 80%;
+}
+.bouton{
+    padding: 10px;
+}
+.bouton input{
+    width: 30%;
+    background-color: #3ebedf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 15px;
+}
+.bouton a{
+    text-decoration: none;
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    margin: 40px;
+}
+.texbox{
+    margin: 0 auto;
+    padding: 10px;
     width: 100%;
 }
-
+.texbox input{
+    padding: 20px;
+    border-radius: 5px;
+    border: solid 1px rgb(233, 233, 233);
+    background-color: rgb(233, 233, 233);
+    color: gray;
+    font-weight: bold;
+}
+.texbox img{
+    width: 5%;
+    right: 10%;
+    position: relative;
+    top: 10px;
+}

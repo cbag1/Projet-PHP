@@ -1,0 +1,15 @@
+{
+      
+    "admins":[
+        {
+            "login":"admin",
+            "password":"password"
+        }
+    ],
+    "joueurs":[
+        {
+            "login":"cbag",
+            "password":"cbag"
+        }
+    ]
+}
