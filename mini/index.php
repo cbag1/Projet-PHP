@@ -51,11 +51,11 @@
         $login=json_decode(file_get_contents('login.json'),true);
         // $login_parsed=json_decode($login);
         // print_r($login->{'joueurs'}[0]->{'login'});
-        // foreach ($login['admins'] as $value) {
-        //     if ($value['login']) {
-        //         # code...
-        //     }
-        // }
+        foreach ($login['admins'] as $value) {
+            if ($value['login']) {
+                # code...
+            }
+        }
     }
 ?>
 
