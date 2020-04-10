@@ -52,8 +52,11 @@
         // $login_parsed=json_decode($login);
         // print_r($login->{'joueurs'}[0]->{'login'});
         foreach ($login['admins'] as $value) {
-            if ($value['login']) {
-                # code...
+            if ($value['login']==$_POST['login'] && $value['password']==$_POST['password']) {
+                echo "BOUM ça marche";
+            }
+            else{
+                echo "Boul niou yapp boy";
             }
         }
     }

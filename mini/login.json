@@ -3,7 +3,7 @@
     "admins":[
         {
             "login":"admin",
-            "password":"password"
+            "password":"admin"
         }
     ],
     "joueurs":[
