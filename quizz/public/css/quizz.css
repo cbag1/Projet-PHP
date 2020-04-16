@@ -1,0 +1,388 @@
+body{
+    margin:0;
+    padding: 0;
+}
+
+.header{
+    background-color: black;
+    height: 100px;
+}
+
+.logo{
+    background-image: url('../images/logo-QuizzSA.png');
+    background-size: 40%;
+    height: 100px;
+    width: 10%;
+    margin-left: 30px;
+    background-repeat: no-repeat;
+}
+
+.content{
+    background-image:url('../images/img-bg.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+.header-text{
+    color: white;
+    position: absolute;
+    top:30px;
+    left: 35%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container{
+    position: absolute;
+    top:25%;
+    left: 30%;
+    height: 65%;
+    width: 40%;
+    background-color: white;
+}
+
+.container-header{
+    height: 100px;
+    background-color: darkturquoise;
+}
+.title{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    padding:40px;
+}
+
+.input-form{
+    height: 60px;
+    margin: 5px 25px;
+}
+
+.form-control{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    padding:5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: silver;
+}
+.form-control1{
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    padding:5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: silver;
+}
+
+
+.error-form{
+    color:red;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.icon-form{
+    height: 35px;
+    width: 30px;
+    position: relative;
+    top: 50px;
+    left: 96%;   
+}
+
+.icon-form-login{
+    background-image:url('../icones/ic-login.png') ;
+    background-repeat: no-repeat; 
+}
+
+
+.icon-form-pwd{
+    background-image:url('../icones/ic-password.png') ;
+    background-repeat: no-repeat; 
+}
+
+.btn-form{
+    margin-top: 40px;
+    padding: 10px;
+    color: white;
+    background-color: darkturquoise;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border:1px solid darkturquoise;
+}
+
+
+.link-form{
+    margin-left:25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: silver;
+    text-decoration: none;
+    
+}
+
+
+.signup-content{
+    margin:0 auto;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+
+.signup-left{
+    width: 70%;
+    height: 80%;
+    float: left;
+    /* background-color: red; */
+}
+
+.title-inscription{
+    /* color:white; */
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.subtitle{
+    color:silver;
+    font-size: 20px;
+    font-weight: lighter;
+    padding-left:20px;
+}
+
+.btn-form1{
+    /* margin-top: 20px; */
+    padding: 10px;
+    color: white;
+    background-color: darkturquoise;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border:1px solid darkturquoise;
+}
+
+.signup-right{
+    width:28%;
+    height: 80%;
+    float: right; 
+    /* background-color: red; */
+}
+
+.imground{
+    margin:0 auto;
+    width: 80%;
+    height: 50%;
+}
+
+.imground img{
+    
+    width: 90%;
+    height: 80%;
+    border-radius: 50%;
+    border: 5px solid darkturquoise;
+}
+
+.file-form{
+    /* position: absolute;
+    margin-top: 3px;
+    margin-left: 3px;
+    height: 1px;
+    width: 1px;
+    z-index: -5; */
+}
+
+
+
+/* Partie pour l'admin */
+
+.admin-content{
+    margin:0 auto;
+    height: 100%;
+    width: 95%;
+    background-color: #F2F2F2;
+}
+
+.info-user{
+    margin-top: 120px;
+    margin-left: 45px;
+    height: 82%;
+    width: 32%;
+    background-color: lavender;
+    border-radius: 10px;
+}
+
+.liste-content{
+    top:250px;
+    position: absolute;
+    left:570px;
+    height: 89%;
+    width: 45%;
+    background-color:white;
+    border-radius: 10px;
+}
+
+.info-header{
+    
+    padding-top: 12px;
+    height: 35%;
+    background: #296b8e;
+background: linear-gradient(0deg, #296b8e 0%, #63d4eb 100%);
+    border-radius: 10px 10px 0 0;
+}
+
+
+.info-header-img{
+    float: left;
+    padding-top: 7px;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 38%;
+    height: 80%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.info-header-img img{
+    margin-left: 8px; 
+    width: 85%;
+    height: 90%;
+    border-radius: 50%;
+    border: 5px solid darkturquoise;
+}
+
+.info-header-text{
+    padding-top: 40px;
+}
+
+.info-liste-title{
+    height: 23.4%;
+    background-color: white;
+}
+
+.info-liste-title-active{
+    border-left: 5px solid #009e00;
+    background-color: #f0dada;
+}
+
+.info-liste{
+    height: 65%;
+}
+
+
+.icon-info-liste{
+    height: 50px;
+    width: 30px;
+    position: relative;
+    top: 25px;
+    left: 90%;   
+}
+
+
+.icon-info-liste-question{
+    background-size: 30px;
+    background-image:url('../icones/ic-liste-active.png') ;
+    background-repeat: no-repeat; 
+}
+.icon-info-create-user{
+    background-size: 30px;
+    background-image:url('../icones/ic-ajout.png') ;
+    background-repeat: no-repeat; 
+}
+.icon-info-liste-joueur{
+    background-size: 30px;
+    background-image:url('../icones/ic-liste.png') ;
+    background-repeat: no-repeat; 
+}
+.info-liste-text{
+    margin-top:-20px;
+    margin-left: 12px;
+}
+
+a{
+    color: #4d4b4b;
+    text-decoration: none;
+}
+
+
+
+
+/* Partie Affichage du Joueurs */
+
+.show-players{
+    margin:0 auto;
+    width:80%;
+    height: 70%;
+    border-radius: 10px/30px;
+    border: 1px solid darkturquoise;
+}
+
+
+.tabjoueurs{
+    margin:0 auto;
+    text-align: center;
+    width:90%;
+    line-height: 2em;
+}
+
+
+.tabjoueurs th {
+    font-weight: bold;
+    font-size: large;
+    color: #3b3436;
+}
+
+.show-players-title{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    color: #3b3436;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.player-form{
+    margin-top: 5px;
+    margin-left: 450px;
+    padding: 10px;
+    color: white;
+    background-color: #39DDD6;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border:1px solid black;
+}
+
+.admin-header{
+    width: 100%;
+    background-color: darkturquoise;
+    height: 80px;
+    margin-bottom:70px;
+}
+.admin-body{
+    width: 100%;
+    height: 70%;
+}
+
+.link-logout{
+    position: relative;
+    top:-20px;
+    left:600px;
+}
+
+.admin-header-text{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+}
