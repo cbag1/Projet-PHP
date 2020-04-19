@@ -16,6 +16,24 @@ function connexion($login,$pwd){
     return "error";
 }
 
+function ajout_user($user){
+
+}
+
+function upload_f($file){
+    $dossier = '/opt/lampp/htdocs/Projet-PHP/quizz/public/images/upload/';
+     $fichier = basename($file['name']);
+     if(move_uploaded_file($file['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+     {
+        // chmod("/opt/lampp/htdocs/Projet-PHP/quizz/public/images/upload/", 0755);
+        // header('location:../index.php');
+        return True;
+     }
+     else //Sinon (la fonction renvoie FALSE).
+     {
+        return FALSE;
+     }
+}
 
 function is_connect(){
     if(!isset($_SESSION['statut'])){
@@ -31,7 +49,7 @@ function deconnexion(){
 }
 
 
-function getData($file="utilisateur") {
+function getData($file="utilisateur"){
     $data=file_get_contents("./data/".$file.".json");
     $data=json_decode($data,true);
     return $data;

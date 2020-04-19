@@ -33,7 +33,7 @@
 
             <div class="input-form">
                 <button type="submit" class="btn-form" name="btn_submit" >Connexion</button>
-                <a href="" class="link-form">S'inscrire pour jouer ?</a>
+                <a href="index.php?lien=inscription_joueur" class="link-form">S'inscrire pour jouer ?</a>
             </div>
         </form>
     </div>

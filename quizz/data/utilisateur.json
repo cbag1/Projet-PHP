@@ -1,18 +1,18 @@
 [
-    {
-        "prenom":"admin",
-        "nom":"admin",
-        "login":"admin",
-        "password":"admin",
-        "profil":"admin",
-        "photo":"admin.jpg"
-    },
-    {
-        "prenom":"joueur",
+{"prenom":"admin",
+    "nom":"admin",
+    "login":"admin",
+    "password":"admin",
+    "profil":"admin",
+    "photo":"admin.jpg",
+    "score":0
+},
+  {"prenom":"joueur",
         "nom":"joueur",
         "login":"joueur",
         "password":"joueur",
         "profil":"joueur",
-        "photo":"joueur.jpg"
+        "photo":"joueur.jpg",
+        "score":0
     }
 ]

@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="../public/css/quizz.css">
 </head>
 <body>
-    <div class="header">
-        <div class="logo"></div>
-        <div class="header-text"> Le Plaisir de Jouer</div>
-    </div>
-
     <!-- Ce partie gere l'inscription et l'insertion dans notre base json -->
     <div class="content">
             <?php

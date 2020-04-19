@@ -10,56 +10,23 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <!-- <tr>
                     <td>GOUDIABY</td>
                     <td>Cheikh Babacar</td>
                     <td>1 022 pts</td>
-                </tr>
-                <tr>
-                    <td>GOUDIABY</td>
-                    <td>Cheikh Babacar</td>
-                    <td>1 022 pts</td>
-                </tr>
-                <tr>
-                    <td>GOUDIABY</td>
-                    <td>Cheikh Babacar</td>
-                    <td>1 022 pts</td>
-                </tr>
-                <tr>
-                    <td>GOUDIABY</td>
-                    <td>Cheikh Babacar</td>
-                    <td>1 022 pts</td>
-                </tr>
-                <tr>
-                    <td>GOUDIABY</td>
-                    <td>Cheikh Babacar</td>
-                    <td>1 022 pts</td>
-                </tr>
-                <tr>
-                    <td>GOUDIABY</td>
-                    <td>Cheikh Babacar</td>
-                    <td>1 022 pts</td>
-                </tr>
-                <tr>
-                    <td>GOUDIABY</td>
-                    <td>Cheikh Babacar</td>
-                    <td>1 022 pts</td>
-                </tr>
-                <tr>
-                    <td>GOUDIABY</td>
-                    <td>Cheikh Babacar</td>
-                    <td>1 022 pts</td>
-                </tr>
-                <tr>
-                    <td>GOUDIABY</td>
-                    <td>Cheikh Babacar</td>
-                    <td>1 022 pts</td>
-                </tr>
-                <tr>
-                    <td>GOUDIABY</td>
-                    <td>Cheikh Babacar</td>
-                    <td>1 022 pts</td>
-                </tr>
+                </tr> -->
+                <?php
+                    $users=file_get_contents('./data/utilisateur.json');
+                    $users=json_decode($users,true);
+                    foreach ($users as $value) {
+                        echo '<tr>';
+                            echo '<td>'.$value['nom'].'</td>';
+                            echo '<td>'.$value['prenom'].'</td>';
+                            echo '<td>'.$value['score'].' pts</td>';
+                        echo '</tr>';
+                    }
+                ?>
+               
             </tbody>
         </table>
     </div>
