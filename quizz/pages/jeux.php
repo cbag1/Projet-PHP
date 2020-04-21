@@ -4,7 +4,7 @@
     // echo $_SESSION['user']['prenom'];
     // echo $_SESSION['user']['login'];
     // echo $_SESSION['user']['photo'];
-    
+
 ?>
 
 
@@ -15,7 +15,7 @@
             <img src="./public/images/upload/<?php echo $_SESSION['user']['photo'] ?>" alt="">
             <div class="textimg"><?php echo $_SESSION['user']['prenom']," ", $_SESSION['user']['nom'] ?></div>
         </div>
-        <div class="header-joueur-text">BIENVENUE SUR LA PLATEFORME DE JEU DE QUIZZ <br> 
+        <div class="header-joueur-text">BIENVENUE SUR LA PLATEFORME DE JEU DE QUIZZ <br>
            JOUER ET TESTER VOTRE NIVEAU DE CULTURE GÉNÉRALE
         </div>
         <div class="header-deconnect">
@@ -54,9 +54,28 @@
                         echo '</tr>';
                         $i++;
                         if ($i==5) {
-                        break;  
+                        break;
                         }
                     }
+
+
+
+//                    $joueurs=[];
+//                    foreach($data as $key=>$value){
+//                       if ($value['profil']==="joueur"){
+//                            $joueurs[]=$value;
+//                       }
+//                   }
+//
+//                    $colonne=array_column($joueurs, 'score');
+//                    array_multisort($colonne, SORT_DESC, $joueurs);
+//
+//                    foreach ($joueurs as $value) {
+//                       // Ici tu fais l'affichage
+//                    }
+
+//
+
                 ?>
                 </table>
             </div>
