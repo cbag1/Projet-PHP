@@ -81,7 +81,7 @@
                     </div>
                     <div class="input-form">
                         <label for="file">Avatar</label>
-                        <input name="file" error="error-5" type="file" class="file-form" accept="image/png, image/jpeg" >
+                        <input name="file" error="error-5" id='file' type="file" class="file-form" accept="image/png, image/jpeg" onchange="load_file(this)">
                         <div class="error-form" id="error-5"></div>
                     </div>
                     <div class="input-form">
@@ -92,7 +92,7 @@
             </div>
             <div class="signup-right">
                 <div class="imground">
-                    <img src="./public/images/cbag.png" alt="cbag goudiaby">
+                    <img src="" alt="avatar user" id='imguser'>
                 </div>
             </div>
         </div>
@@ -110,7 +110,13 @@ for(input of inputs ){
      })
 }
 
+function load_file(avatar){
+    let image=document.getElementById("imguser");
+    image.src=window.URL.createObjectURL(avatar.files[0]);
+}
+
 document.getElementById("form-signup").addEventListener("submit",function(e){
+
 
   var error=false;
   for(input of inputs){
@@ -128,15 +134,16 @@ document.getElementById("form-signup").addEventListener("submit",function(e){
   var idpwd1=document.getElementById('pwd1').value;
 
   if (idpwd!=idpwd1) {
-    document.getElementById('error-4').innerText="Les Mots de passe sont differents";
+      document.getElementById('error-4').innerText="Les Mots de passe sont differents";
     alert("Errror Mot de Passe");
       error=true;
   }
 
+  
   if (error) {
     e.preventDefault();
     return false;
   }
    
-})
+});
 </script>

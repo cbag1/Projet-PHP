@@ -385,3 +385,153 @@ a{
     font-weight: bolder;
     color: white;
 }
+
+
+/* Partie Joueur */
+.joueur-container{
+    margin: 0 auto;
+    width: 95%;
+    height: 770px;
+    background-color: #ECEBE9;
+}
+
+.header-joueur{
+    background-color: #51BFD0;
+    height: 100px;
+    margin-bottom: 12px;
+}
+
+
+.img-joueur{
+    height: 75%;
+    width: 16%;
+    margin-right: 2%;
+    float: left;
+}
+
+.img-joueur img{
+    margin-top: 7px;
+    margin-left: 35px;
+    height: 85%;
+    width: 45%;
+    border-radius: 50%;
+    border:1px solid white;
+}
+
+.textimg{
+    margin-left: 20px;
+    color:white;
+    font-size: large;
+}
+
+
+.header-joueur-text{
+    width: 70%;
+    text-align: center;
+    float: left;
+    height: 100%;
+    padding-top: 10px;
+    color: white;
+    font-size: x-large;
+    line-height: 40px;
+    font-weight: bold;
+    float: left;
+}
+
+.header-deconnect{
+    float: left;
+    margin-top: 30px;
+    padding-top: 12px;
+    width: auto;
+    height: auto;
+}
+
+.header-deconnect a{
+    border:1px solid #39DDD6;
+    background-color: #39DDD6;
+    color: white;
+    padding:12px;
+    border-radius: 5px;
+    
+}
+
+.body-joueur{
+    margin:0 auto;
+    width: 97%;
+    border-radius: 10px;
+    border:1px solid #DCDCDC;
+    height: 650px;
+    background-color: white;
+
+}
+
+.joueur-quest{
+    margin: 1%;
+    width: 61%;
+    height: 95%;
+    float: left;
+    border:1px solid rgb(29, 29, 236);
+    border-radius: 10px/30px;
+}
+
+.top-joueurs{
+    margin: 1%;
+    float: right;
+    width: 34%;
+    height: 80%;
+    border-radius: 10px/30px;
+    border:1px solid blue;
+    background-color:white;
+}
+
+
+.top-menu ul {
+    width: 100%;
+    padding:0;
+    margin:0;
+    list-style-type:none;
+}
+.top-menu li {
+    width: 48.5%;
+    text-align: center;
+    /* margin-left:2px; */
+    float:left; /*pour IE*/
+}
+.top-menu ul li a {
+    display:block;
+    float:left;   
+    width:100%;
+    color:black;
+    border-radius: 10px/30px;
+    text-decoration:none;
+    text-align:center;
+    padding:5px;
+    border:1px solid;
+    /*pour avoir un effet "outset" avec IE :*/
+    border-color:#DCDCDC;
+}
+
+
+.top-menu-content{
+    width: 100%;
+}
+
+
+
+.topj{
+    margin:0 auto;
+    text-align: center;
+    width:98%;
+}
+
+.topj tr {
+    font-weight: bold;
+    font-size: large;
+    color: #3b3436;
+}
+
+
+#coll{
+    border-radius: 0px/10px;
+    border-bottom: 3px solid #00b7ff;
+}
