@@ -535,3 +535,7 @@ a{
     border-radius: 0px/10px;
     border-bottom: 3px solid #00b7ff;
 }
+
+.ligne{
+    width:100%;
+}

@@ -12,7 +12,7 @@
                     <div class="info-user">
                         <div class="info-header">
                             <div class="info-header-img">
-                                <img src="./public/images/cbag.png" alt="cbag goudiaby">
+                                <img src="./public/images/upload/<?php echo $_SESSION['user']['photo'] ?>" >
                             </div>
                             <div class="info-header-text">Cheikh Babacar <br> GOUDIABY</div>
                         </div>
@@ -37,7 +37,7 @@
                                 </a>
                             </div>
                             <div class="info-liste-title">
-                                <a href="#">
+                                <a href="index.php?lien=accueil&menu=creer-question">
                                     <div class="icon-info-liste icon-info-create-user"></div>
                                     <div class="info-liste-text">  Creer Questions</div>
                                 </a>
@@ -55,6 +55,10 @@
                                     case 'creer-admin':
                                         require_once("./pages/signup.php");
                                         break; 
+                                    
+                                    case 'creer-question':
+                                        require_once('./pages/creerquestions.php');
+                                        break;
                                 }
                             }else{
                                 require_once("./pages/liste_joueurs.php");

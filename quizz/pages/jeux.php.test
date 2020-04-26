@@ -1,0 +1,18 @@
+<?php
+    is_connect(); 
+    echo 'Bienvenue ' .$_SESSION['user']['login'];
+    require_once("./traitement/fonctions.php");   
+?>
+<div class="bj-container">
+    <div class="bj-container-header">
+        <div class="image">
+            <a href="#"><img src="./public/images/upload/<?php echo $_SESSION['user']['photo']?>" alt=""></a>
+        </div>
+            <div class="bj-title"> BIENVENUE SUR LA PLATEFORME DE JEUX
+                JOUER ET TESTER VOTRE NIVEAU DE CULTURE GENERALE</div>
+                 <a href="PageConnexion.php"><button type="submit" class="btn-form-2" name="deconnexion" >Deconnection</button></a>
+    </div>
+    
+</div>
+
+

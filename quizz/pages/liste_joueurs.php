@@ -16,21 +16,23 @@
                     <td>1 022 pts</td>
                 </tr> -->
                 <?php
-                    $users=file_get_contents('./data/utilisateur.json');
-                    $users=json_decode($users,true);
-                    foreach ($users as $value) {
+                $users = file_get_contents('./data/utilisateur.json');
+                $users = json_decode($users, true);
+                foreach ($users as $value) {
+                    if ($value['profil'] != "admin") {
                         echo '<tr>';
-                            echo '<td>'.$value['nom'].'</td>';
-                            echo '<td>'.$value['prenom'].'</td>';
-                            echo '<td>'.$value['score'].' pts</td>';
+                        echo '<td>' . $value['nom'] . '</td>';
+                        echo '<td>' . $value['prenom'] . '</td>';
+                        echo '<td>' . $value['score'] . ' pts</td>';
                         echo '</tr>';
                     }
+                }
                 ?>
-               
+
             </tbody>
         </table>
     </div>
     <div>
-       <button type="submit" class="player-form" name="btn_submit" >Suivant</button>
+        <button type="submit" class="player-form" name="btn_submit">Suivant</button>
     </div>
 </div>
