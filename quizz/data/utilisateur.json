@@ -1,2 +1,28 @@
-[{"prenom":"admin","nom":"admin","login":"admin","password":"admin","profil":"admin","photo":"cbag.png"},
-    {"prenom":"joueur","nom":"joueur","login":"joueur","password":"joueur","profil":"joueur","photo":"cbag.png","score":11},{"prenom":"ll","nom":"ll","login":"ll","password":"ll","profil":"joueur","photo":"cbag.png","score":10}]
+[
+    {
+        "prenom": "admin",
+        "nom": "admin",
+        "login": "admin",
+        "password": "admin",
+        "profil": "admin",
+        "photo": "cbag.png"
+    },
+    {
+        "prenom": "joueur",
+        "nom": "joueur",
+        "login": "joueur",
+        "password": "joueur",
+        "profil": "joueur",
+        "photo": "cbag.png",
+        "score": 11
+    },
+    {
+        "prenom": "ll",
+        "nom": "ll",
+        "login": "ll",
+        "password": "ll",
+        "profil": "joueur",
+        "photo": "cbag.png",
+        "score": 10
+    }
+]
