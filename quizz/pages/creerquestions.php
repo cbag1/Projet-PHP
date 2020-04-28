@@ -43,14 +43,14 @@ if (isset($_POST['submit'])) {
     <form action="" method="post" id="form-question">
         <div class="ligne">
             <label for="question">Questions</label>
-            <textarea name="question" cols="30" rows="10" error="error-0"></textarea>
-            <span id="error-0"></span>
+            <textarea name="question" cols="30" rows="10" id="question"></textarea>
+            <span id="error-question"></span>
         </div>
 
         <div class="ligne">
             <label for="nbpoints">Nbre de Points</label>
-            <input type="number" name="nbrpoint" id="nbrpoint" min="0" error="error-1">
-            <span id="error-1"></span>
+            <input type="number" name="nbrpoint" id="nbrpoint" min="0" error="error-0">
+            <span id="error-0"></span>
         </div>
 
         <div class="ligne">
@@ -67,43 +67,50 @@ if (isset($_POST['submit'])) {
 
         </div>
         <div>
+            <span id="error-checked"></span>
             <button type="submit" name="submit" id="submit">Enregistrer</button>
         </div>
     </form>
 </div>
 
 <script>
+    // ===============================================================
+    //            Gestion des choix et de la génération des inputs
+    // ===============================================================
+
     var nbRep = 0;
 
     function choix() {
         nbRep = 0;
         document.getElementById('inputs').innerHTML = "";
+        document.getElementById('error-checked').innerText = "";
     }
 
 
-    function suppdiv(n) {
-        alert(n);
-    }
+   
 
     function addchamp() {
-
+        var IndiceError = nbRep + 1;
         document.getElementById('nbrep').value = nbRep;
         var choix = document.getElementById('tresp').value;
         var divInputs = document.getElementById('inputs');
         var newInput = document.createElement('div');
+        newInput.setAttribute("id", "row_", +nbRep);
         if (choix === "rmult") {
             newInput.innerHTML = `
-            <input type="text" name="rep_${nbRep}"/>
-            <input type="checkbox" name="checked[]" value="${nbRep}"/>
+            <input type="text" name="rep_${nbRep}" error="error-${IndiceError}" class="input_gen"/>
+            <input type="checkbox"  name="checked[]" value="${nbRep}" class="check_gen" />
             <input type="button" value="X" id="nbRep" onclick="suppdiv(${nbRep})" /> 
+            <span id="error-${IndiceError}"></span>
             `;
 
         } else if (choix === "rsimple") {
 
             newInput.innerHTML = `
-            <input type="text" name="rep_${nbRep}"/>
-            <input type="radio" name="repsimple" value="${nbRep}"/>
+            <input type="text" name="rep_${nbRep}" error="error-${IndiceError}" class="input_gen"/>
+            <input type="radio" name="repsimple" value="${nbRep}" class="radio_gen" />
             <input type="button" value="X" id="nbRep" onclick="suppdiv(${nbRep})" /> 
+            <span id="error-${IndiceError}"></span>
             `;
         } else {
             newInput.innerHTML = `
@@ -114,7 +121,10 @@ if (isset($_POST['submit'])) {
         nbRep++;
     }
 
-
+    function suppdiv(n) {
+        var target = document.getElementById("row_", n);
+        target.remove();
+    }
 
     function suppInput(n) {
         var target = document.getElementById(n);
@@ -124,10 +134,20 @@ if (isset($_POST['submit'])) {
     //                Validation des champs Inputs aprés submit
     // ===============================================================
 
+    const inputs = document.getElementsByTagName("input");
+    for (input of inputs) {
+        input,
+        addEventListener("keyup", function(e) {
+            if (e.target.hasAttribute("error")) {
+                var idDivError = e.target.getAttribute("error");
+                document.getElementById(idDivError).innerText = "";
+            }
+        })
+    }
 
     document.getElementById("form-question").addEventListener("submit", function(e) {
 
-
+        var choix = document.getElementById('tresp').value;
         var error = false;
         for (input of inputs) {
 
@@ -140,14 +160,22 @@ if (isset($_POST['submit'])) {
 
             }
         }
-        // var idpwd = document.getElementById('pwd').value;
-        // var idpwd1 = document.getElementById('pwd1').value;
 
-        // if (idpwd != idpwd1) {
-        //     document.getElementById('error-4').innerText = "Les Mots de passe sont differents";
-        //     alert("Errror Mot de Passe");
-        //     error = true;
-        // }
+        if (document.getElementById('question').value == "") {
+            document.getElementById('error-question').innerHTML = "Ce champ est obligatoire";
+            error = true;
+        }
+        const radios = document.querySelectorAll('input[type="radio"]:checked');
+        if (choix == "rsimple" && radios.length == 0 && nbRep > 0) {
+            error = true;
+            document.getElementById('error-checked').innerText = "*Veuillez cocher la bonne réponse";
+        }
+
+        const checkbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        if (choix == "rmult" && checkbox.length < 2 && nbRep > 0) {
+            error = true;
+            document.getElementById('error-checked').innerText = "*Veuillez cocher 2 réponses au moins";
+        }
 
 
         if (error) {
@@ -156,21 +184,4 @@ if (isset($_POST['submit'])) {
         }
 
     });
-
-    // var formValid = document.getElementById('submit');
-    // var question = document.getElementById('question');
-    // var missquestion = document.getElementById('missquestion');
-
-    // formValid.addEventListener('click', validation);
-
-    // function validation(event) {
-
-    //     if (question.value=="") {
-    //         event.preventDefault();
-    //         alert(' Tu te foutait de ma gueule donc');
-    //     }else{
-    //         alert("Cool");
-    //     }
-    //     event.preventDefault();
-    // }
 </script>
