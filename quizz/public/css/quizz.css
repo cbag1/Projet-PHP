@@ -361,6 +361,26 @@ a{
     border:1px solid black;
 }
 
+.paginer{
+    height: 100%;
+    width: 100%;
+    position:relative;
+    height:150px;
+}
+
+.pagination{
+    margin-top: 10px;
+    width: 18%;
+    float: left;
+    padding: 10px;
+    color: white;
+    background-color: #39DDD6;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border:1px solid black;
+}
+
 .admin-header{
     width: 100%;
     background-color: darkturquoise;

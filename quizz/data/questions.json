@@ -1,1 +1,65 @@
-[{"question":"test","nbpoints":"12","typeReponse":"rmult","nbreponses":3,"reponses":["cool","cool","djhfdj"],"IndexRepValides":["0","1"]},{"question":"yesy","nbpoints":"2","typeReponse":"rsimple","nbreponses":3,"reponses":["test","fff","fgg"],"IndexRepValides":"0"},{"question":"djfhdflgl","nbpoints":"4","typeReponse":"rsimple","nbreponses":2,"reponses":["ff","fff"],"IndexRepValides":"0"},{"question":"djfhdflgl","nbpoints":"4","typeReponse":"rsimple","nbreponses":2,"reponses":["ff","fff"],"IndexRepValides":"0"},{"question":"djfhdflgl","nbpoints":"4","typeReponse":"rsimple","nbreponses":2,"reponses":["ff","fff"],"IndexRepValides":"0"},{"question":"djfhdflgl","nbpoints":"4","typeReponse":"rsimple","nbreponses":2,"reponses":["ff","fff"],"IndexRepValides":"0"}]
+[
+    {
+        "question": "test",
+        "nbpoints": "5",
+        "typeReponse": "rmult",
+        "Reponses": [
+            {
+                "valeur": "bonjour",
+                "statut": true
+            },
+            {
+                "valeur": "bonjur",
+                "statut": false
+            },
+            {
+                "valeur": "coolll",
+                "statut": true
+            }
+        ]
+    },
+    {
+        "question": "test 2",
+        "nbpoints": "7888",
+        "typeReponse": "rsimple",
+        "Reponses": {
+            "1": {
+                "valeur": "jfhkhk",
+                "statut": false
+            },
+            "2": {
+                "valeur": "khkhk",
+                "statut": true
+            },
+            "3": {
+                "valeur": "test",
+                "statut": false
+            }
+        }
+    },
+    {
+        "question": "test 2",
+        "nbpoints": "7888",
+        "typeReponse": "rsimple",
+        "Reponses": {
+            "1": {
+                "valeur": "jfhkhk",
+                "statut": false
+            },
+            "2": {
+                "valeur": "khkhk",
+                "statut": true
+            },
+            "3": {
+                "valeur": "test",
+                "statut": false
+            }
+        }
+    },
+    {
+        "question": "testt",
+        "nbpoints": "1245",
+        "typeReponse": "rtexte",
+        "ReponseTexte": "bonjour"
+    }
+]

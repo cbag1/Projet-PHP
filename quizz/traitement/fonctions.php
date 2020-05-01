@@ -65,8 +65,19 @@ function AjoutData($namefile, $data)
     $datafile[] = $data;
     $datafile = json_encode($datafile);
     if (file_put_contents("./data/". $namefile . ".json", $datafile)) {
-        echo ("Cool");
+        return true;
     } else {
-        echo ("Pas Cool");
+        return false;
     }
+}
+
+
+function dump_profile($profil){
+    $utilisateur=getData();
+    foreach ($utilisateur as $key => $value) {
+        if($value['profil']==$profil){
+            $joueurs[]=$value;
+        }
+    }
+    return $joueurs;
 }

@@ -2,40 +2,44 @@
 require_once("./traitement/fonctions.php");
 if (isset($_POST['submit'])) {
 
-    $question = array( // Ajouter seulement du question de ses points
+
+    $question = array(
         'question' => $_POST['question'],
         'nbpoints' => $_POST['nbrpoint'],
         'typeReponse' => $_POST['tresp']
     );
+
     if ($_POST['tresp'] == "rmult" || $_POST['tresp'] == "rsimple") {
-        $question['nbreponses'] = (int) ($_POST['nbrep']) + 1;
+        // echo $_POST['tresp'];
+        // $tabReponse = [];
         for ($i = 0; $i <= (int) $_POST['nbrep']; $i++) {
             if (isset($_POST["rep_$i"])) {
-                $tabreponses[] = $_POST["rep_$i"];
+                $tabReponse[$i]['valeur'] = $_POST["rep_$i"];
+                if ($_POST['tresp'] == "rmult") {
+                    if (in_array($i, $_POST['checked'])) {
+                        $tabReponse[$i]['statut'] = true;
+                    } else {
+                        $tabReponse[$i]['statut'] = false;
+                    }
+                } else {
+                    if ($i == (int) $_POST['repsimple']) {
+                        $tabReponse[$i]['statut'] = true;
+                    } else {
+                        $tabReponse[$i]['statut'] = false;
+                    }
+                }
             }
         }
-        $question['reponses'] = $tabreponses;
-        if ($_POST['tresp'] == "rmult") {
-            $question['IndexRepValides'] = $_POST['checked'];
-        } else {
-            $question['IndexRepValides'] = $_POST['repsimple'];
-        }
+        $question['Reponses'] = $tabReponse;
     } elseif ($_POST['tresp'] == "rtexte") {
-        $question['ReponseTexte'] = $_POST['rep_texte'];
+        $question['ReponseTexte'] = $_POST['reptexte'];
     }
-
-    AjoutData('questions', $question);
-
-
-
-    // var_dump($question);
-
-    // Test Reponse correctss
-    // foreach ($_POST['checked'] as $key => $value) {
-    //     // echo $value;
-    //     // echo "<br/>";
-    //     echo $question['reponses'][$value];
-    // }
+    // Enregistrement et la verification des questions
+    if (AjoutData('questions', $question)) {
+        echo "Enregistrement question Reussie ";
+    } else {
+        echo "Oups echec Enregistrement question";
+    }
 }
 ?>
 
@@ -87,7 +91,7 @@ if (isset($_POST['submit'])) {
     }
 
 
-   
+
 
     function addchamp() {
         var IndiceError = nbRep + 1;
@@ -114,7 +118,7 @@ if (isset($_POST['submit'])) {
             `;
         } else {
             newInput.innerHTML = `
-            <input type="text" name="rep_texte"/>
+            <input type="text" name="reptexte"/>
             `;
         }
         divInputs.appendChild(newInput);

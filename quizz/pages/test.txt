@@ -1,0 +1,33 @@
+// $question = array( // Ajouter seulement du question de ses points
+    //     'question' => $_POST['question'],
+    //     'nbpoints' => $_POST['nbrpoint'],
+    //     'typeReponse' => $_POST['tresp']
+    // );
+    // if ($_POST['tresp'] == "rmult" || $_POST['tresp'] == "rsimple") {
+    //     $question['nbreponses'] = (int) ($_POST['nbrep']) + 1;
+    //     for ($i = 0; $i <= (int) $_POST['nbrep']; $i++) {
+    //         if (isset($_POST["rep_$i"])) {
+    //             $tabreponses[] = $_POST["rep_$i"];
+    //         }
+    //     }
+    //     $question['reponses'] = $tabreponses;
+    //     if ($_POST['tresp'] == "rmult") {
+    //         $question['IndexRepValides'] = $_POST['checked'];
+    //     } else {
+    //         $question['IndexRepValides'] = $_POST['repsimple'];
+    //     }
+    // } elseif ($_POST['tresp'] == "rtexte") {
+    //     $question['reponses'] = $_POST['rep_texte'];
+    // }
+
+    // AjoutData('questions', $question);
+
+
+    // var_dump($question);
+
+    // Test Reponse correctss
+    // foreach ($_POST['checked'] as $key => $value) {
+    //     // echo $value;
+    //     // echo "<br/>";
+    //     echo $question['reponses'][$value];
+    // }

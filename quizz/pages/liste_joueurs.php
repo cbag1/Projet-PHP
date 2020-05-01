@@ -10,21 +10,32 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- <tr>
-                    <td>GOUDIABY</td>
-                    <td>Cheikh Babacar</td>
-                    <td>1 022 pts</td>
-                </tr> -->
                 <?php
-                $users = file_get_contents('./data/utilisateur.json');
-                $users = json_decode($users, true);
-                foreach ($users as $value) {
-                    if ($value['profil'] != "admin") {
+
+                $users = dump_profile('joueur');
+                // echo count($users);
+                if (isset($_GET['pindex'])) {
+                    $i = (int) $_GET['pindex'];
+                } else {
+                    $i = 0;
+                }
+                $j = -1;
+                if (($i - 5) >= 0 && $i != 0) {
+                    $j = $i - 5;
+                }
+                foreach ($users as $key => $value) {
+                    // echo $key,"    ";
+                    if ($key >= $i) {
                         echo '<tr>';
                         echo '<td>' . $value['nom'] . '</td>';
                         echo '<td>' . $value['prenom'] . '</td>';
                         echo '<td>' . $value['score'] . ' pts</td>';
                         echo '</tr>';
+
+                        if ($key == ($i + 5) || count($users) == ($key + 1)) {
+                            $i = $key;
+                            break;
+                        }
                     }
                 }
                 ?>
@@ -32,7 +43,20 @@
             </tbody>
         </table>
     </div>
-    <div>
-        <button type="submit" class="player-form" name="btn_submit">Suivant</button>
+    <div class="paginer">
+        <div class="pagination" style="float: right">
+            <?php
+            if (count($users) - ($i + 1) != 0) {
+                echo '<a href="index.php?lien=accueil&menu=liste-joueur&pindex=' . $i . '"  name="btn_submit">Suivant</a>';
+            }
+            ?>
+        </div>
+        <div class="pagination">
+            <?php
+            if ($j >= 0) {
+                echo '<a href="index.php?lien=accueil&menu=liste-joueur&pindex=' . $j . '"  name="btn_submit">Precedent</a>';
+            }
+            ?>
+        </div>
     </div>
 </div>
