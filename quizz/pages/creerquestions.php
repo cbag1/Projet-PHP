@@ -43,10 +43,13 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
+<div class="mtext">
+    PARAMÉTRER VOS QUESTIONS
+</div>
 <div class="creer-quest">
     <form action="" method="post" id="form-question">
         <div class="ligne">
-            <label for="question">Questions</label>
+            <label id="labelquestion" for="question">Questions</label>
             <textarea name="question" cols="30" rows="10" id="question"></textarea>
             <span id="error-question"></span>
         </div>
@@ -71,7 +74,10 @@ if (isset($_POST['submit'])) {
 
         </div>
         <div>
-            <span id="error-checked"></span>
+        <span id="error-checked"></span>
+        </div>
+        <div id="subbottom">
+            
             <button type="submit" name="submit" id="submit">Enregistrer</button>
         </div>
     </form>
@@ -102,6 +108,7 @@ if (isset($_POST['submit'])) {
         newInput.setAttribute("id", "row_", +nbRep);
         if (choix === "rmult") {
             newInput.innerHTML = `
+            <label>Réponse ${nbRep+1}</label>
             <input type="text" name="rep_${nbRep}" error="error-${IndiceError}" class="input_gen"/>
             <input type="checkbox"  name="checked[]" value="${nbRep}" class="check_gen" />
             <input type="button" value="X" id="nbRep" onclick="suppdiv(${nbRep})" /> 

@@ -1,14 +1,14 @@
-body{
-    margin:0;
+body {
+    margin: 0;
     padding: 0;
 }
 
-.header{
+.header {
     background-color: black;
     height: 100px;
 }
 
-.logo{
+.logo {
     background-image: url('../images/logo-QuizzSA.png');
     background-size: 40%;
     height: 100px;
@@ -17,97 +17,99 @@ body{
     background-repeat: no-repeat;
 }
 
-.content{
-    background-image:url('../images/img-bg.jpg') ;
+.content {
+    background-image: url('../images/img-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 800px;
 }
 
-.header-text{
+.header-text {
     color: white;
     position: absolute;
-    top:30px;
+    top: 30px;
     left: 35%;
     font-size: 30px;
     font-weight: bold;
 }
 
-.container{
+.container {
     position: absolute;
-    top:25%;
+    top: 25%;
     left: 30%;
     height: 65%;
     width: 40%;
     background-color: white;
 }
 
-.container-header{
+.container-header {
     height: 100px;
     background-color: darkturquoise;
 }
-.title{
-    color:white;
+
+.title {
+    color: white;
     font-size: 20px;
     font-weight: bold;
-    padding:40px;
+    padding: 40px;
 }
 
-.input-form{
+.input-form {
     height: 60px;
     margin: 5px 25px;
 }
 
-.form-control{
+.form-control {
     width: 100%;
     height: 30px;
     border-radius: 5px;
     border: 1px solid silver;
-    padding:5px;
+    padding: 5px;
     font-size: 20px;
     font-weight: bold;
     color: silver;
 }
-.form-control1{
+
+.form-control1 {
     width: 80%;
     height: 30px;
     border-radius: 5px;
     border: 1px solid silver;
-    padding:5px;
+    padding: 5px;
     font-size: 20px;
     font-weight: bold;
     color: silver;
 }
 
 
-.error-form{
-    color:red;
+.error-form {
+    color: red;
     width: 100%;
     font-size: 16px;
     font-weight: bold;
 }
 
 
-.icon-form{
+.icon-form {
     height: 35px;
     width: 30px;
     position: relative;
     top: 50px;
-    left: 96%;   
+    left: 96%;
 }
 
-.icon-form-login{
-    background-image:url('../icones/ic-login.png') ;
-    background-repeat: no-repeat; 
+.icon-form-login {
+    background-image: url('../icones/ic-login.png');
+    background-repeat: no-repeat;
 }
 
 
-.icon-form-pwd{
-    background-image:url('../icones/ic-password.png') ;
-    background-repeat: no-repeat; 
+.icon-form-pwd {
+    background-image: url('../icones/ic-password.png');
+    background-repeat: no-repeat;
 }
 
-.btn-form{
+.btn-form {
     margin-top: 40px;
     padding: 10px;
     color: white;
@@ -115,36 +117,36 @@ body{
     font-size: 20px;
     font-weight: bold;
     border-radius: 5px;
-    border:1px solid darkturquoise;
+    border: 1px solid darkturquoise;
 }
 
 
-.link-form{
-    margin-left:25px;
+.link-form {
+    margin-left: 25px;
     font-size: 20px;
     font-weight: bold;
     color: silver;
     text-decoration: none;
-    
+
 }
 
 
-.signup-content{
-    margin:0 auto;
+.signup-content {
+    margin: 0 auto;
     height: 100%;
     width: 100%;
     background-color: white;
 }
 
 
-.signup-left{
+.signup-left {
     width: 70%;
     height: 80%;
     float: left;
     /* background-color: red; */
 }
 
-.title-inscription{
+.title-inscription {
     /* color:white; */
     font-size: 20px;
     font-weight: bold;
@@ -153,14 +155,14 @@ body{
     padding-left: 20px;
 }
 
-.subtitle{
-    color:silver;
+.subtitle {
+    color: silver;
     font-size: 20px;
     font-weight: lighter;
-    padding-left:20px;
+    padding-left: 20px;
 }
 
-.btn-form1{
+.btn-form1 {
     /* margin-top: 20px; */
     padding: 10px;
     color: white;
@@ -168,31 +170,31 @@ body{
     font-size: 20px;
     font-weight: bold;
     border-radius: 5px;
-    border:1px solid darkturquoise;
+    border: 1px solid darkturquoise;
 }
 
-.signup-right{
-    width:28%;
+.signup-right {
+    width: 28%;
     height: 80%;
-    float: right; 
+    float: right;
     /* background-color: red; */
 }
 
-.imground{
-    margin:0 auto;
+.imground {
+    margin: 0 auto;
     width: 80%;
     height: 50%;
 }
 
-.imground img{
-    
+.imground img {
+
     width: 90%;
     height: 80%;
     border-radius: 50%;
     border: 5px solid darkturquoise;
 }
 
-.file-form{
+.file-form {
     /* position: absolute;
     margin-top: 3px;
     margin-left: 3px;
@@ -205,14 +207,14 @@ body{
 
 /* Partie pour l'admin */
 
-.admin-content{
-    margin:0 auto;
+.admin-content {
+    margin: 0 auto;
     height: 100%;
     width: 95%;
     background-color: #F2F2F2;
 }
 
-.info-user{
+.info-user {
     margin-top: 120px;
     margin-left: 45px;
     height: 82%;
@@ -221,27 +223,27 @@ body{
     border-radius: 10px;
 }
 
-.liste-content{
-    top:250px;
+.liste-content {
+    top: 250px;
     position: absolute;
-    left:570px;
+    left: 570px;
     height: 89%;
     width: 45%;
-    background-color:white;
+    background-color: white;
     border-radius: 10px;
 }
 
-.info-header{
-    
+.info-header {
+
     padding-top: 12px;
     height: 35%;
     background: #296b8e;
-background: linear-gradient(0deg, #296b8e 0%, #63d4eb 100%);
+    background: linear-gradient(0deg, #296b8e 0%, #63d4eb 100%);
     border-radius: 10px 10px 0 0;
 }
 
 
-.info-header-img{
+.info-header-img {
     float: left;
     padding-top: 7px;
     margin-left: 12px;
@@ -252,63 +254,66 @@ background: linear-gradient(0deg, #296b8e 0%, #63d4eb 100%);
     border: 1px solid black;
 }
 
-.info-header-img img{
-    margin-left: 8px; 
+.info-header-img img {
+    margin-left: 8px;
     width: 85%;
     height: 90%;
     border-radius: 50%;
     border: 5px solid darkturquoise;
 }
 
-.info-header-text{
+.info-header-text {
     padding-top: 40px;
 }
 
-.info-liste-title{
+.info-liste-title {
     height: 23.4%;
     background-color: white;
 }
 
-.info-liste-title-active{
+.info-liste-title-active {
     border-left: 5px solid #009e00;
     background-color: #f0dada;
 }
 
-.info-liste{
+.info-liste {
     height: 65%;
 }
 
 
-.icon-info-liste{
+.icon-info-liste {
     height: 50px;
     width: 30px;
     position: relative;
     top: 25px;
-    left: 90%;   
+    left: 90%;
 }
 
 
-.icon-info-liste-question{
+.icon-info-liste-question {
     background-size: 30px;
-    background-image:url('../icones/ic-liste-active.png') ;
-    background-repeat: no-repeat; 
+    background-image: url('../icones/ic-liste-active.png');
+    background-repeat: no-repeat;
 }
-.icon-info-create-user{
+
+.icon-info-create-user {
     background-size: 30px;
-    background-image:url('../icones/ic-ajout.png') ;
-    background-repeat: no-repeat; 
+    background-image: url('../icones/ic-ajout.png');
+    background-repeat: no-repeat;
 }
-.icon-info-liste-joueur{
+
+.icon-info-liste-joueur {
     background-size: 30px;
-    background-image:url('../icones/ic-liste.png') ;
-    background-repeat: no-repeat; 
+    background-image: url('../icones/ic-liste.png');
+    background-repeat: no-repeat;
 }
-.info-liste-text{
-    margin-top:-20px;
+
+.info-liste-text {
+    margin-top: -20px;
     margin-left: 12px;
 }
 
-a{
+a {
     color: #4d4b4b;
     text-decoration: none;
 }
@@ -318,19 +323,19 @@ a{
 
 /* Partie Affichage du Joueurs */
 
-.show-players{
-    margin:0 auto;
-    width:80%;
+.show-players {
+    margin: 0 auto;
+    width: 80%;
     height: 70%;
     border-radius: 10px/30px;
     border: 1px solid darkturquoise;
 }
 
 
-.tabjoueurs{
-    margin:0 auto;
+.tabjoueurs {
+    margin: 0 auto;
     text-align: center;
-    width:90%;
+    width: 90%;
     line-height: 2em;
 }
 
@@ -340,7 +345,7 @@ a{
     color: #3b3436;
 }
 
-.show-players-title{
+.show-players-title {
     text-align: center;
     font-size: large;
     font-weight: bold;
@@ -349,7 +354,7 @@ a{
     margin-bottom: 20px;
 }
 
-.player-form{
+.player-form {
     margin-top: 5px;
     margin-left: 450px;
     padding: 10px;
@@ -358,18 +363,18 @@ a{
     font-size: 20px;
     font-weight: bold;
     border-radius: 5px;
-    border:1px solid black;
+    border: 1px solid black;
 }
 
 /*  */
-.paginer{
+.paginer {
     height: 100%;
     width: 100%;
-    position:relative;
-    height:150px;
+    position: relative;
+    height: 150px;
 }
 
-.pagination{
+.pagination {
     margin-top: 10px;
     width: 18%;
     float: left;
@@ -379,27 +384,28 @@ a{
     font-size: 20px;
     font-weight: bold;
     border-radius: 5px;
-    border:1px solid black;
+    border: 1px solid black;
 }
 
-.admin-header{
+.admin-header {
     width: 100%;
     background-color: darkturquoise;
     height: 80px;
-    margin-bottom:70px;
+    margin-bottom: 70px;
 }
-.admin-body{
+
+.admin-body {
     width: 100%;
     height: 70%;
 }
 
-.link-logout{
+.link-logout {
     position: relative;
-    top:-20px;
-    left:600px;
+    top: -20px;
+    left: 600px;
 }
 
-.admin-header-text{
+.admin-header-text {
     text-align: center;
     padding-top: 20px;
     font-size: 25px;
@@ -409,44 +415,44 @@ a{
 
 
 /* Partie Joueur */
-.joueur-container{
+.joueur-container {
     margin: 0 auto;
     width: 95%;
     height: 770px;
     background-color: #ECEBE9;
 }
 
-.header-joueur{
+.header-joueur {
     background-color: #51BFD0;
     height: 100px;
     margin-bottom: 12px;
 }
 
 
-.img-joueur{
+.img-joueur {
     height: 75%;
     width: 16%;
     margin-right: 2%;
     float: left;
 }
 
-.img-joueur img{
+.img-joueur img {
     margin-top: 7px;
     margin-left: 35px;
     height: 85%;
     width: 45%;
     border-radius: 50%;
-    border:1px solid white;
+    border: 1px solid white;
 }
 
-.textimg{
+.textimg {
     margin-left: 20px;
-    color:white;
+    color: white;
     font-size: large;
 }
 
 
-.header-joueur-text{
+.header-joueur-text {
     width: 70%;
     text-align: center;
     float: left;
@@ -459,7 +465,7 @@ a{
     float: left;
 }
 
-.header-deconnect{
+.header-deconnect {
     float: left;
     margin-top: 30px;
     padding-top: 12px;
@@ -467,82 +473,85 @@ a{
     height: auto;
 }
 
-.header-deconnect a{
-    border:1px solid #39DDD6;
+.header-deconnect a {
+    border: 1px solid #39DDD6;
     background-color: #39DDD6;
     color: white;
-    padding:12px;
+    padding: 12px;
     border-radius: 5px;
-    
+
 }
 
-.body-joueur{
-    margin:0 auto;
+.body-joueur {
+    margin: 0 auto;
     width: 97%;
     border-radius: 10px;
-    border:1px solid #DCDCDC;
+    border: 1px solid #DCDCDC;
     height: 650px;
     background-color: white;
 
 }
 
-.joueur-quest{
+.joueur-quest {
     margin: 1%;
     width: 61%;
     height: 95%;
     float: left;
-    border:1px solid rgb(29, 29, 236);
+    border: 1px solid rgb(29, 29, 236);
     border-radius: 10px/30px;
 }
 
-.top-joueurs{
+.top-joueurs {
     margin: 1%;
     float: right;
     width: 34%;
     height: 80%;
     border-radius: 10px/30px;
-    border:1px solid blue;
-    background-color:white;
+    border: 1px solid blue;
+    background-color: white;
 }
 
 
 .top-menu ul {
     width: 100%;
-    padding:0;
-    margin:0;
-    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
+
 .top-menu li {
     width: 48.5%;
     text-align: center;
     /* margin-left:2px; */
-    float:left; /*pour IE*/
+    float: left;
+    /*pour IE*/
 }
+
 .top-menu ul li a {
-    display:block;
-    float:left;   
-    width:100%;
-    color:black;
+    display: block;
+    float: left;
+    width: 100%;
+    color: black;
     border-radius: 10px/30px;
-    text-decoration:none;
-    text-align:center;
-    padding:5px;
-    border:1px solid;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid;
     /*pour avoir un effet "outset" avec IE :*/
-    border-color:#DCDCDC;
+    border-color: #DCDCDC;
 }
 
 
-.top-menu-content{
+.top-menu-content {
     width: 100%;
 }
 
 
 
-.topj{
-    margin:0 auto;
+.topj {
+    margin: 0 auto;
     text-align: center;
-    width:98%;
+    width: 98%;
 }
 
 .topj tr {
@@ -552,15 +561,133 @@ a{
 }
 
 
-#coll{
+#coll {
     border-radius: 0px/10px;
     border-bottom: 3px solid #00b7ff;
 }
 
-.ligne{
-    width:100%;
+
+
+/* ===================== Creer Question ==================== */
+
+.ligne {
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 span {
-    color:red;
+    color: red;
+}
+
+#labelquestion {
+    width: 5%;
+    position: relative;
+    top: -70px;
+    left: 10px;
+}
+
+.mtext {
+    padding-left: 50px;
+    padding-bottom: 5px;
+    padding-top: 12px;
+    font-size: x-large;
+    font-weight: bolder;
+    color: #51BFD0;
+
+}
+
+.ligne textarea {
+    width: 70%;
+    margin-top: 20px;
+    border: 1px solid #51BFD0;
+    margin-left: 12px;
+    border: 1px solid #51BFD0;
+    background-color: #F7F7F7;
+}
+
+.ligne label {
+    margin-right: 20px;
+    margin-left: 5px;
+    font-size: medium;
+    font-weight: bolder;
+
+}
+
+label {
+    color: silver;
+}
+
+.ligne input[type='number'] {
+
+    padding: .6em .8em .6em .8em;
+    width: 40px;
+    border-color: #51BFD0;
+}
+
+.ligne select {
+    padding: .9em .8em .9em .9em;
+    margin-right: 5px;
+    width: 55%;
+    border: 1px solid #51BFD0;
+    background-color: #F7F7F7;
+}
+
+.ligne input[type='button'] {
+    padding-bottom: .3em;
+    /* padding:.3em .6em .2em .4em; */
+    font-size: xx-large;
+    background-color: #51BFD0;
+    width: 8%;
+}
+
+
+.creer-quest {
+    margin: 0 auto;
+    border-radius: 10px/30px;
+    width: 90%;
+    height: 90%;
+    border: 1px solid #51BFD0;
+}
+
+.input_gen {
+    width: 50%;
+    padding:.6em;
+    margin-bottom: 4px;
+    border-color: #51BFD0;
+    border-style: inset;
+
+}
+
+#inputs{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#inputs label{
+    font-size:medium;
+    font-weight: bold;
+}
+
+.check_gen{
+    padding:.6em;
+}
+
+#inputs input[type='button']{
+    font-size: large;
+    background-color: red;
+    width: 8%;
+    
+}
+
+#subbottom{
+    top:5px;
+    position: relative;
+    left:70%;
+}
+
+#subbottom #submit{
+    border:1px solid darkturquoise;
+    padding:12px;
+    background-color: #39DDD6;
+    color:white;
 }
