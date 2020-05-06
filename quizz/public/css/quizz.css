@@ -691,3 +691,39 @@ label {
     background-color: #39DDD6;
     color:white;
 }
+
+
+/* ================== Affichage Questions ============== */
+
+.nbraffichage{
+    margin-top: 15px;
+    margin-left:100px;    
+}   
+
+.nbraffichage input[type='text']{
+    width:50px;
+}
+
+
+.nbraffichage span{
+    color:#8D8070;
+    font-size:larger;
+    font-weight:lighter;
+}
+
+.nbraffichage button{
+    padding:10px;
+    /* width: 10px; */
+    text-align: center;
+    color:white;
+    background-color: #5E91B0;
+}
+
+.paffichage{
+    width: 92%;
+    border-radius: 10px/30px;
+    border:1px solid #5E91B0;
+    margin:0 auto;
+    height:88%;
+    overflow-y: scroll;
+}

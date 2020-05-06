@@ -1,13 +1,24 @@
 <?php
 require_once("./traitement/fonctions.php");
+
+$parametres = getData("settings");
+if (isset($_POST['submit'])) {
+    $parametres['NbrQuestionJeu'] = $_POST['nbre'];
+    $final_parametres = json_encode($parametres);
+    file_put_contents('./data/settings.json', $final_parametres);
+}
+
+
 ?>
 <div style="height:100%;">
     <div class="nbraffichage">
-        <span>Nbre de question/Jeu</span>
-        <input type="text" name="nbre">
-        <button>OK</button>
+        <form action="" method="post">
+            <span>Nbre de question/Jeu</span>
+            <input type="text" name="nbre" value="<?echo $parametres['NbrQuestionJeu']; ?>" >
+            <button type="submit" name="submit">OK</button>
+        </form>
     </div>
-    <div>
+    <div class="paffichage">
         <?php
         $listequestions = getData('questions');
 
