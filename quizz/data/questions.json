@@ -1,65 +1,147 @@
 [
     {
-        "question": "test",
-        "nbpoints": "5",
-        "typeReponse": "rmult",
+        "question": "Quelle est le capital de la Casamance",
+        "nbpoints": "12",
+        "typeReponse": "rsimple",
         "Reponses": [
             {
-                "valeur": "bonjour",
+                "valeur": "Ziguinchor",
                 "statut": true
             },
             {
-                "valeur": "bonjur",
+                "valeur": "Bignona",
                 "statut": false
             },
             {
-                "valeur": "coolll",
+                "valeur": "Niamone",
+                "statut": false
+            }
+        ]
+    },
+    {
+        "question": "Dakar est ?",
+        "nbpoints": "100",
+        "typeReponse": "rmult",
+        "Reponses": [
+            {
+                "valeur": "region",
+                "statut": true
+            },
+            {
+                "valeur": "pays",
+                "statut": false
+            },
+            {
+                "valeur": "ville",
                 "statut": true
             }
         ]
     },
     {
-        "question": "test 2",
-        "nbpoints": "7888",
-        "typeReponse": "rsimple",
-        "Reponses": {
-            "1": {
-                "valeur": "jfhkhk",
-                "statut": false
-            },
-            "2": {
-                "valeur": "khkhk",
-                "statut": true
-            },
-            "3": {
-                "valeur": "test",
-                "statut": false
-            }
-        }
-    },
-    {
-        "question": "test 2",
-        "nbpoints": "7888",
-        "typeReponse": "rsimple",
-        "Reponses": {
-            "1": {
-                "valeur": "jfhkhk",
-                "statut": false
-            },
-            "2": {
-                "valeur": "khkhk",
-                "statut": true
-            },
-            "3": {
-                "valeur": "test",
-                "statut": false
-            }
-        }
-    },
-    {
-        "question": "testt",
-        "nbpoints": "1245",
+        "question": "Comment je m'appelle moi ?",
+        "nbpoints": "1200",
         "typeReponse": "rtexte",
-        "ReponseTexte": "bonjour"
+        "ReponseTexte": "cbag"
+    },
+    {
+        "question": "Quelles sont les langages de programmation ?",
+        "nbpoints": "25",
+        "typeReponse": "rmult",
+        "Reponses": [
+            {
+                "valeur": "Python",
+                "statut": true
+            },
+            {
+                "valeur": "HTML",
+                "statut": true
+            },
+            {
+                "valeur": "Javascript",
+                "statut": true
+            }
+        ]
+    },
+    {
+        "question": "Ou se trouve Dakar ?",
+        "nbpoints": "77",
+        "typeReponse": "rsimple",
+        "Reponses": [
+            {
+                "valeur": "Senegal",
+                "statut": true
+            },
+            {
+                "valeur": "Gambie",
+                "statut": false
+            },
+            {
+                "valeur": "france",
+                "statut": false
+            }
+        ]
+    },
+    {
+        "question": "Qui est le meilleur joueur du monde ?",
+        "nbpoints": "45",
+        "typeReponse": "rsimple",
+        "Reponses": [
+            {
+                "valeur": "Ronaldinho",
+                "statut": true
+            },
+            {
+                "valeur": "Messi",
+                "statut": false
+            },
+            {
+                "valeur": "Cris",
+                "statut": false
+            }
+        ]
+    },
+    {
+        "question": "Comment s'appelle le president du S\u00c9N\u00c9GAL",
+        "nbpoints": "11",
+        "typeReponse": "rtexte",
+        "ReponseTexte": "Macky Sall"
+    },
+    {
+        "question": "Qui est le Responsable Moral des Moustarchidines",
+        "nbpoints": "14500",
+        "typeReponse": "rsimple",
+        "Reponses": [
+            {
+                "valeur": "Serigne Moustapha SY",
+                "statut": true
+            },
+            {
+                "valeur": "Serigne Cheikh",
+                "statut": false
+            },
+            {
+                "valeur": "Serigne Babacar SY",
+                "statut": false
+            }
+        ]
+    },
+    {
+        "question": "C'est quoi ODC ?",
+        "nbpoints": "12",
+        "typeReponse": "rmult",
+        "Reponses": [
+            {
+                "valeur": "Une ecole",
+                "statut": true
+            },
+            {
+                "valeur": "une entreprise",
+                "statut": false
+            },
+            {
+                "valeur": "Une communaut\u00e9",
+                "statut": true
+            }
+        ]
     }
 ]

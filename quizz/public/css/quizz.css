@@ -727,3 +727,74 @@ label {
     height:88%;
     overflow-y: scroll;
 }
+
+.show_quest{
+    width:90%;
+    height: 130px;
+    background-color: #DCDCDC;
+    margin:0 auto;
+    margin-top: 20px;
+    text-align: center;
+    padding-top:10px;
+    border: inset;
+    border-color: darkturquoise ;
+}
+
+.nbrpoints{
+    width: 12%;
+    text-align: center;
+    height: 30px;
+    margin:0 auto;
+    margin-left: 80%;
+    padding-top: 10px;
+    background-color: #DCDCDC;
+    border: inset;
+    border-color: darkturquoise ;
+}
+
+
+.rep_question{
+    width: 80%;
+    /* text-align: center; */
+    padding-top: 50px;
+    height: 170px;
+    margin: 0 auto;
+    margin-top: 50px;
+    /* border:1px solid black; */
+    padding-left: 10%;
+}
+
+
+.rep_question span {
+    font-size: large;
+    line-height: 12px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+.rep_question input[type=text]{
+    width:80%;
+    border:1px solid black;
+    padding: 12px;
+}
+
+
+.rep_question input[type=checkbox]{
+    width:12px;
+}
+
+
+.soumettre{
+    width:80%;
+    margin-top: 12px;
+    margin:0 auto;
+}
+
+.soumettre input[type=submit]{
+    padding:12px;
+    width:120px;
+    font-size: large;
+    font-weight: bolder;
+    color:white;
+}

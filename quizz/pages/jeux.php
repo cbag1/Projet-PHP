@@ -30,49 +30,201 @@ is_connect();
             $nbrquest = getData("settings");
             $nbrquest = (int) $nbrquest['NbrQuestionJeu'];
 
+            // if (isset($_SESSION['tabindex'])) {
+            //     $tabquest=$_SESSION['tabindex'];
+            // }
+
             if (isset($_GET['numero'])) {
+                $tabquest = $_SESSION['tabindex'];
+                // echo "<pre>";
+                // print_r($_SESSION['tabindex']);
+                // echo "</pre>";
                 $i = (int) $_GET['numero'];
             } else {
                 $i = 1;
+                $_GET['numero'] = $i;
+                $_SESSION['tabindex'] = [];
             }
 
+            // Creation de la session qui garde les index
+            if (!isset($_SESSION['tabindex']['index'])) {
+                $_SESSION['tabindex']['index']=[];
+            }
 
             if ($i <= $nbrquest) {
                 echo "<form action='./traitement/traitement.php' method='POST'>";
                 echo "<input type='hidden' name='val_i' value=$i />";
-                if (isset($tabquest[$i])) {
-                    echo "coll";
-                } else {
-                    $t = array_rand($questions);
+                echo "<input type='hidden' name='choice' value= />";
+
+
+                if (isset($tabquest[$_GET['numero']])) {
+
+                    echo "Deja fait";
+                    echo "<div class='show_quest'>";
+                    $t = (int) $tabquest[$_GET['numero']][0];
                     echo "<input type='hidden' name='indice_i' value=$t />";
-                    echo $questions[$t]['question'];
+                    echo "<input type='hidden' name='choice' value=" . $questions[$t]['typeReponse'] . " />";
+                    echo "<h1>Question " . $_GET['numero'] . "/" . $nbrquest . "</h1>";
+                    echo "<h3>" . $questions[$t]['question'] . "</h3>";
                     echo "<br>";
+                    echo "</div>";
+                    echo "<br>";
+                    echo "<div class='nbrpoints'>" . $questions[$t]['nbpoints'] . " pts</div>";
+                    echo "<div class='rep_question'>";
                     if ($questions[$t]['typeReponse'] == "rmult") {
                         foreach ($questions[$t]['Reponses'] as $key => $value) {
-                            echo "<input type='checkbox' name='checked[]'/>";
-                            echo $value['valeur'];
+                            if (in_array(strval($key), $tabquest[$_GET['numero']][1])) {
+                                echo "<input type='checkbox' name='checked[]' value='$key' checked/>";
+                            } else {
+                                echo "<input type='checkbox' name='checked[]' value='$key'/>";
+                            }
+
+                            echo "<span>" . $value['valeur'] . "</span>";
+                            echo '<br>';
                             echo '<br>';
                         }
                     } elseif ($questions[$t]['typeReponse'] == "rsimple") {
-                        echo "Simple";
-                    } else {
-                        echo "tEXT";
+                        foreach ($questions[$t]['Reponses'] as $key => $value) {
+                            // echo $tabquest[$_GET['numero']][1];
+                            if ($key ==(int)  $tabquest[$_GET['numero']][1]) {
+                                echo "<input type='radio' name='radio' value='$key' checked />";
+                            } else {
+                                echo "<input type='radio' name='radio' value='$key'/>";
+                            }
+
+                            echo "<span>" . $value['valeur'] . "</span>";
+                            echo '<br>';
+                            echo '<br>';
+                        }
+                    } elseif ($questions[$t]['typeReponse'] == "rtexte") {
+                        echo "<input type='text' name='texte' value='" . $tabquest[$_GET['numero']][1] . "' /> </br>";
                     }
+                    echo "</div>";
+                } else {
+                    $t = array_rand($questions);
+                    while(in_array($t,$_SESSION['tabindex']['index'])){
+                        $t = array_rand($questions);
+                    }
+                    echo "<input type='hidden' name='indice_i' value=$t />";
+                    echo "<div class='show_quest'>";
+                    echo "<h1>Question " . $_GET['numero'] . "/" . $nbrquest . "</h1>";
+                    echo "<h3>" . $questions[$t]['question'] . "</h3>";
+                    echo "</div>";
+                    echo "<input type='hidden' name='choice' value=" . $questions[$t]['typeReponse'] . " />";
+
+                    echo "<br>";
+                    // $_SESSION['tabindex'][$_GET['numero']][0] = $t;
+                    echo "<div class='nbrpoints'>" . $questions[$t]['nbpoints'] . " pts</div>";
+                    echo "<div class='rep_question'>";
+                    if ($questions[$t]['typeReponse'] == "rmult") {
+                        foreach ($questions[$t]['Reponses'] as $key => $value) {
+                            echo "<input type='checkbox' name='checked[]' value='$key'/>";
+                            echo "<span>" . $value['valeur'] . "</span>";
+                            echo '<br>';
+                            echo '<br>';
+                        }
+                    } elseif ($questions[$t]['typeReponse'] == "rsimple") {
+                        foreach ($questions[$t]['Reponses'] as $key => $value) {
+                            echo "<input type='radio' name='radio' value='$key' />";
+                            echo "<span>" . $value['valeur'] . "</span>";
+                            echo '<br>';
+                            echo '<br>';
+                        }
+                    } else {
+                        echo "<input type='text' name='texte' /> </br>";
+                    }
+
+                    echo "</div>";
                 }
 
 
 
 
-
+                echo "<div class='soumettre'>";
                 if ($i > 1) {
                     $j = $i - 1;
-                    echo "<input type='submit' name='prec' value='Precedent' /> </br>";
+                    echo "</br><input type='submit' name='prec' value='Precedent' style='background-color:grey;' /> ";
                 }
                 $i++;
-                echo "</br><input type='submit' name='suivant' value='Suivant' /> </br>";
+                echo "<input type='submit' name='suivant' value='Suivant' style='float:right; background-color:#39DDD6;' /> </br>";
+
+                echo "</div>";
                 echo "</form>";
             } else {
-                echo " le jeu est Terminé";
+                echo " le jeu est Terminé </br>";
+                // echo "<pre>";
+                // print_r($_SESSION['tabindex']);
+                // echo "</pre>";
+
+                for ($i = 1; $i <= $nbrquest; $i++) {
+                    $indice = $_SESSION['tabindex'][$i][0];
+                    $rep = $_SESSION['tabindex'][$i][1];
+                    echo "<pre>";
+                    print_r($rep);
+                    echo "</pre>";
+                    if ($questions[$indice]['typeReponse'] == "rmult") {
+                        $bool = true;
+                        foreach ($questions[$indice]['Reponses'] as $key => $value) {
+                            if ($value['statut'] == "true") {
+                                if (in_array($key, $rep)) {
+                                    $bool = true;
+                                } else {
+                                    $bool = false;
+                                    break;
+                                }
+                            } else {
+                                if (!in_array($key, $rep)) {
+                                    $bool = true;
+                                } else {
+                                    $bool = false;
+                                    break;
+                                }
+                            }
+                            if (!$bool) {
+                                echo "Réponsev False";
+                            } else {
+                                echo "Réponsev True";
+                            }
+                        }
+                    } elseif ($questions[$indice]['typeReponse'] == "rsimple") {
+                        $bool = true;
+                        foreach ($questions[$indice]['Reponses'] as $key => $value) {
+                            if ($value['statut'] == "true") {
+                                if ($key == $rep) {
+                                    $bool = true;
+                                } else {
+                                    $bool = false;
+                                    break;
+                                }
+                            } else {
+                                if ($key != $rep) {
+                                    $bool = true;
+                                } else {
+                                    $bool = false;
+                                    break;
+                                }
+                            }
+                            if (!$bool) {
+                                echo "Réponsev False";
+                            } else {
+                                echo "Réponsev True";
+                            }
+                        }
+                    } else {
+                        $bool = true;
+                        if ($questions[$indice]['ReponseTexte'] != $rep) {
+                            $bool = false;
+                        }
+
+                        if (!$bool) {
+                            echo "Réponsev False";
+                        } else {
+                            echo "Réponsev True";
+                        }
+                    }
+                    // echo $questions[$indice]['question'];
+                    echo "</br>";
+                }
             }
 
 
