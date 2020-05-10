@@ -16,3 +16,70 @@
 </div>
 
 
+
+                for ($i = 1; $i <= $nbrquest; $i++) {
+                    $indice = $_SESSION['tabindex'][$i][0];
+                    $rep = $_SESSION['tabindex'][$i][1];
+                    echo "<pre>";
+                    print_r($rep);
+                    echo "</pre>";
+                    if ($questions[$indice]['typeReponse'] == "rmult") {
+                        $bool = true;
+                        foreach ($questions[$indice]['Reponses'] as $key => $value) {
+                            if ($value['statut'] == "true") {
+                                if (in_array($key, $rep)) {
+                                    $bool = true;
+                                } else {
+                                    $bool = false;
+                                    break;
+                                }
+                            } else {
+                                if (!in_array($key, $rep)) {
+                                    $bool = true;
+                                } else {
+                                    $bool = false;
+                                    break;
+                                }
+                            }
+                            if (!$bool) {
+                                echo "Réponsev False";
+                            } else {
+                                echo "Réponsev True";
+                            }
+                        }
+                    } elseif ($questions[$indice]['typeReponse'] == "rsimple") {
+                        $bool = true;
+                        foreach ($questions[$indice]['Reponses'] as $key => $value) {
+                            if ($value['statut'] == "true") {
+                                if ($key == $rep) {
+                                    $bool = true;
+                                } else {
+                                    $bool = false;
+                                    break;
+                                }
+                            } else {
+                                if ($key != $rep) {
+                                    $bool = true;
+                                } else {
+                                    $bool = false;
+                                    break;
+                                }
+                            }
+                            if (!$bool) {
+                                echo "Réponsev False";
+                            } else {
+                                echo "Réponsev True";
+                            }
+                        }
+                    } else {
+                        $bool = true;
+                        if ($questions[$indice]['ReponseTexte'] != $rep) {
+                            $bool = false;
+                        }
+
+                        if (!$bool) {
+                            echo "Réponsev False";
+                        } else {
+                            echo "Réponsev True";
+                        }
+                    }

@@ -48,7 +48,7 @@ is_connect();
 
             // Creation de la session qui garde les index
             if (!isset($_SESSION['tabindex']['index'])) {
-                $_SESSION['tabindex']['index']=[];
+                $_SESSION['tabindex']['index'] = [];
             }
 
             if ($i <= $nbrquest) {
@@ -86,7 +86,7 @@ is_connect();
                     } elseif ($questions[$t]['typeReponse'] == "rsimple") {
                         foreach ($questions[$t]['Reponses'] as $key => $value) {
                             // echo $tabquest[$_GET['numero']][1];
-                            if ($key ==(int)  $tabquest[$_GET['numero']][1]) {
+                            if ($key == (int)  $tabquest[$_GET['numero']][1]) {
                                 echo "<input type='radio' name='radio' value='$key' checked />";
                             } else {
                                 echo "<input type='radio' name='radio' value='$key'/>";
@@ -102,7 +102,7 @@ is_connect();
                     echo "</div>";
                 } else {
                     $t = array_rand($questions);
-                    while(in_array($t,$_SESSION['tabindex']['index'])){
+                    while (in_array($t, $_SESSION['tabindex']['index'])) {
                         $t = array_rand($questions);
                     }
                     echo "<input type='hidden' name='indice_i' value=$t />";
@@ -151,80 +151,111 @@ is_connect();
                 echo "</div>";
                 echo "</form>";
             } else {
-                echo " le jeu est Terminé </br>";
+                echo "<div class='quizz-resultat'>";
+
+                echo "<h1 style='text-align:center; color:green;'> le jeu est Terminé </h1>";
+
                 // echo "<pre>";
                 // print_r($_SESSION['tabindex']);
                 // echo "</pre>";
 
+                // echo $questions[$indice]['question'];
+                echo "</br>";
+                // echo "<pre>";
+                // print_r($_SESSION['tabindex']);
+                // echo "</pre>";
+                $points = 0;
                 for ($i = 1; $i <= $nbrquest; $i++) {
-                    $indice = $_SESSION['tabindex'][$i][0];
-                    $rep = $_SESSION['tabindex'][$i][1];
-                    echo "<pre>";
-                    print_r($rep);
-                    echo "</pre>";
-                    if ($questions[$indice]['typeReponse'] == "rmult") {
-                        $bool = true;
-                        foreach ($questions[$indice]['Reponses'] as $key => $value) {
-                            if ($value['statut'] == "true") {
-                                if (in_array($key, $rep)) {
-                                    $bool = true;
-                                } else {
-                                    $bool = false;
-                                    break;
-                                }
-                            } else {
-                                if (!in_array($key, $rep)) {
-                                    $bool = true;
-                                } else {
-                                    $bool = false;
-                                    break;
-                                }
-                            }
-                            if (!$bool) {
-                                echo "Réponsev False";
-                            } else {
-                                echo "Réponsev True";
-                            }
-                        }
-                    } elseif ($questions[$indice]['typeReponse'] == "rsimple") {
-                        $bool = true;
-                        foreach ($questions[$indice]['Reponses'] as $key => $value) {
-                            if ($value['statut'] == "true") {
-                                if ($key == $rep) {
-                                    $bool = true;
-                                } else {
-                                    $bool = false;
-                                    break;
-                                }
-                            } else {
-                                if ($key != $rep) {
-                                    $bool = true;
-                                } else {
-                                    $bool = false;
-                                    break;
-                                }
-                            }
-                            if (!$bool) {
-                                echo "Réponsev False";
-                            } else {
-                                echo "Réponsev True";
-                            }
-                        }
-                    } else {
-                        $bool = true;
-                        if ($questions[$indice]['ReponseTexte'] != $rep) {
-                            $bool = false;
-                        }
 
-                        if (!$bool) {
-                            echo "Réponsev False";
+                    echo "<div class='rep-checked'>";
+                    echo "<h3>$i.   " . $questions[$_SESSION['tabindex'][$i][0]]['question'] . "  </h3>";
+                    if ($questions[$_SESSION['tabindex'][$i][0]]['typeReponse'] == "rtexte") {
+                        echo "VOTRE REPONSE : " . $_SESSION['tabindex'][$i][1];
+                        if ($_SESSION['tabindex'][$i][1] == $questions[$_SESSION['tabindex'][$i][0]]['ReponseTexte']) {
+                            $points += (int) $questions[$_SESSION['tabindex'][$i][0]]['nbpoints'];
+                            echo "<span style='color:green;'> (Réponse Correcte) </span> </br>";
                         } else {
-                            echo "Réponsev True";
+                            echo "<span> (Réponse Fausse) </span> </br>";
+                            echo "<span style='color:green;'> La bonne reponse etait : " . $questions[$_SESSION['tabindex'][$i][0]]['ReponseTexte'] . "</span>";
+                        }
+                    } elseif ($questions[$_SESSION['tabindex'][$i][0]]['typeReponse'] == "rmult") {
+                        echo "</br>";
+                        // ====recuperer les reponses du joueur ====
+                        $ReponseMult = "";
+                        foreach ($_SESSION['tabindex'][$i][1] as  $value) {
+                            $ReponseMult .= $questions[$_SESSION['tabindex'][$i][0]]['Reponses'][$value]['valeur'] . ", ";
+                        }
+                        $BonnesReponses = "";
+                        foreach ($questions[$_SESSION['tabindex'][$i][0]]['Reponses'] as  $key => $value) {
+                            if ($questions[$_SESSION['tabindex'][$i][0]]['Reponses'][$key]['statut'] == true) {
+                                $BonnesReponses .= $questions[$_SESSION['tabindex'][$i][0]]['Reponses'][$key]['valeur'] . ", ";
+                            }
+                        }
+                        // ============FIn recuperation ============
+                        $ind = (int) $_SESSION['tabindex'][$i][0];
+                        $res = $_SESSION['tabindex'][$i][1];
+                        $bool = true;
+                        foreach ($questions[$ind]['Reponses'] as $key => $value) {
+
+                            if ($value['statut'] == true) {
+                                if (!in_array($key, $res)) {
+                                    $bool = false;
+                                    break;
+                                }
+                            } else {
+                                if (in_array($key, $res)) {
+                                    $bool = false;
+                                    break;
+                                }
+                            }
+                        }
+                        echo "Vos réponses : ", $ReponseMult, " </br>";
+                        if ($bool) {
+                            $points += (int) $questions[$ind]['nbpoints'];
+                            echo "<span style='color:green;'> Les réponses sont correctes </span>";
+                        } else {
+                            echo "<span>Les Réponses sont fausses, J'ai la paresse de vous montres les coreections </br> </span>";
+                            echo "<span style='color:green' >" . $BonnesReponses . "</span>";
+                        }
+                        echo "</br>";
+                    } else {
+                        $ind = (int) $_SESSION['tabindex'][$i][1];
+                        // echo $questions[$_SESSION['tabindex'][$i][0]]['Reponses'][$ind]['statut'];
+                        echo "</br>";
+                        echo "Votre Réponse : " . $questions[$_SESSION['tabindex'][$i][0]]['Reponses'][$ind]['valeur'] . " ";
+                        if ($questions[$_SESSION['tabindex'][$i][0]]['Reponses'][$ind]['statut'] == true) {
+                            $points += (int) $questions[$_SESSION['tabindex'][$i][0]]['nbpoints'];
+                            echo "<span style='color:green'> Correcte </span> ";
+                        } else {
+                            echo "<span > Fausse </span>  </br>";
+                            foreach ($questions[$_SESSION['tabindex'][$i][0]]['Reponses'] as  $value) {
+                                if ($value['statut'] == true) {
+                                    echo "<span style='color:green;'> La bonne reponse etait : " . $value['valeur'] . "</span>";
+                                    break;
+                                }
+                            }
                         }
                     }
-                    // echo $questions[$indice]['question'];
-                    echo "</br>";
+
+
+                    echo "</div>";
                 }
+                // ============= Enregistrement des points ===============
+
+                $parametres = getData("utilisateur");
+
+                foreach ($parametres as $key => $value) {
+                    if ($value['login'] === $_SESSION['user']['login']) {
+                        if($_SESSION['user']['score']<$points){
+                            $parametres[$key]['score'] = $points;
+                        }
+                        
+                    }
+                }
+                $final_parametres = json_encode($parametres);
+                file_put_contents('./data/utilisateur.json', $final_parametres);
+
+                echo "</div>";
             }
 
 
@@ -300,7 +331,7 @@ is_connect();
                         echo '<tr>';
                         echo '<td>' . $value['nom'] . '</td>';
                         echo '<td>' . $value['prenom'] . '</td>';
-                        echo '<td id="coll">' . $value['score'] . ' pts</td>';
+                        echo '<td id="coll" style="border-bottom:3px solid #'.substr(str_shuffle('ABCDEF0123456789'), 0, 6).'">' . $value['score'] . ' pts</td>';
                         echo '</tr>';
                         $i++;
                         if ($i == 5) {

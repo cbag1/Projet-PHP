@@ -31,7 +31,9 @@ if (isset($_POST['btn_submit'])) {
             $users[] = $user;
             $final_users = json_encode($users);
             if (file_put_contents('./data/utilisateur.json', $final_users)) {
-                echo ("Cool");
+               if($_GET['lien']=="inscription_joueur"){
+                   header('location: ./index.php');
+               }
             } else {
                 echo ("Pas Cool");
             }

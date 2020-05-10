@@ -48,6 +48,9 @@ function deconnexion()
 {
     unset($_SESSION['user']);
     unset($_SESSION['statut']);
+    if (isset($_SESSION['tabindex'])) {
+        unset($_SESSION['tabindex']);
+    }
     session_destroy();
 }
 
@@ -81,3 +84,11 @@ function dump_profile($profil){
     }
     return $joueurs;
 }
+
+
+// function get_resultat($index){
+//     $questions=getData('questions');
+//     foreach ($$questions[$index][] as $key => $value) {
+//         # code...
+//     }
+// }

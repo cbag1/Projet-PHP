@@ -563,7 +563,6 @@ a {
 
 #coll {
     border-radius: 0px/10px;
-    border-bottom: 3px solid #00b7ff;
 }
 
 
@@ -651,109 +650,109 @@ label {
 
 .input_gen {
     width: 50%;
-    padding:.6em;
+    padding: .6em;
     margin-bottom: 4px;
     border-color: #51BFD0;
     border-style: inset;
 
 }
 
-#inputs{
+#inputs {
     width: 90%;
     margin: 0 auto;
 }
 
-#inputs label{
-    font-size:medium;
+#inputs label {
+    font-size: medium;
     font-weight: bold;
 }
 
-.check_gen{
-    padding:.6em;
+.check_gen {
+    padding: .6em;
 }
 
-#inputs input[type='button']{
+#inputs input[type='button'] {
     font-size: large;
     background-color: red;
     width: 8%;
-    
+
 }
 
-#subbottom{
-    top:5px;
+#subbottom {
+    top: 5px;
     position: relative;
-    left:70%;
+    left: 70%;
 }
 
-#subbottom #submit{
-    border:1px solid darkturquoise;
-    padding:12px;
+#subbottom #submit {
+    border: 1px solid darkturquoise;
+    padding: 12px;
     background-color: #39DDD6;
-    color:white;
+    color: white;
 }
 
 
 /* ================== Affichage Questions ============== */
 
-.nbraffichage{
+.nbraffichage {
     margin-top: 15px;
-    margin-left:100px;    
-}   
+    margin-left: 100px;
+}
 
-.nbraffichage input[type='text']{
-    width:50px;
+.nbraffichage input[type='text'] {
+    width: 50px;
 }
 
 
-.nbraffichage span{
-    color:#8D8070;
-    font-size:larger;
-    font-weight:lighter;
+.nbraffichage span {
+    color: #8D8070;
+    font-size: larger;
+    font-weight: lighter;
 }
 
-.nbraffichage button{
-    padding:10px;
+.nbraffichage button {
+    padding: 10px;
     /* width: 10px; */
     text-align: center;
-    color:white;
+    color: white;
     background-color: #5E91B0;
 }
 
-.paffichage{
+.paffichage {
     width: 92%;
     border-radius: 10px/30px;
-    border:1px solid #5E91B0;
-    margin:0 auto;
-    height:88%;
+    border: 1px solid #5E91B0;
+    margin: 0 auto;
+    height: 88%;
     overflow-y: scroll;
 }
 
-.show_quest{
-    width:90%;
+.show_quest {
+    width: 90%;
     height: 130px;
     background-color: #DCDCDC;
-    margin:0 auto;
+    margin: 0 auto;
     margin-top: 20px;
     text-align: center;
-    padding-top:10px;
+    padding-top: 10px;
     border: inset;
-    border-color: darkturquoise ;
+    border-color: darkturquoise;
 }
 
-.nbrpoints{
+.nbrpoints {
     width: 12%;
     text-align: center;
     height: 30px;
-    margin:0 auto;
+    margin: 0 auto;
     margin-left: 80%;
     padding-top: 10px;
     background-color: #DCDCDC;
     border: inset;
-    border-color: darkturquoise ;
+    border-color: darkturquoise;
 }
 
 
-.rep_question{
+.rep_question {
     width: 80%;
     /* text-align: center; */
     padding-top: 50px;
@@ -773,28 +772,41 @@ label {
     text-transform: uppercase;
 }
 
-.rep_question input[type=text]{
-    width:80%;
-    border:1px solid black;
+.rep_question input[type=text] {
+    width: 80%;
+    border: 1px solid black;
     padding: 12px;
 }
 
 
-.rep_question input[type=checkbox]{
-    width:12px;
+.rep_question input[type=checkbox] {
+    width: 12px;
 }
 
 
-.soumettre{
-    width:80%;
+.soumettre {
+    width: 80%;
     margin-top: 12px;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
-.soumettre input[type=submit]{
-    padding:12px;
-    width:120px;
+.soumettre input[type=submit] {
+    padding: 12px;
+    width: 120px;
     font-size: large;
     font-weight: bolder;
-    color:white;
+    color: white;
+}
+
+
+.quizz-resultat {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+
+.rep-checked {
+    border: 1px dashed black;
+    text-align: center;
+    padding-bottom: 30px;
 }
